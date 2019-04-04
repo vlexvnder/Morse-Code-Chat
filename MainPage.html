@@ -17,7 +17,7 @@
 
 
 
-    <body>
+    <body style="background-color: rgb(242, 242, 242, .4)">
         <nav class="navbar navbar-inverse">
 
             <div class="navbar-header">
@@ -27,12 +27,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <span><a class="navbar-brand" style="position: relative;" href="/">Morse Code Encoder</a><a class="navbar-brand" href="logout">Logout</a></span>
+              <span><a class="navbar-brand" style="position: relative;" href="/"><b>Morse Code Encoder</b></a><a class="navbar-brand" href="logout">Logout</a></span>
 
           </div>
         </nav>
 
-        <div id="chat" class="container" style="position: relative;height: 200px;overflow: auto;display: block;">
+        <div id="chat" class="container" style="position: relative;height: 400px;overflow: auto;display: block; width:59%; ">
 
 
 
@@ -54,12 +54,12 @@ objDiv.scrollTop = objDiv.scrollHeight</script>
 
             <div class="row">
                 <form action="." method="POST" class="container">
-                    <textarea class="form-control" name="contents" placeholder="Enter something!"></textarea>
+                    <textarea class="form-control" name="contents" placeholder="Enter something!" ></textarea>
                     <br>
 
 
 
-                    <span><input type="submit" class="btn btn-success" name="submit" value="Encode">  <input type="submit" class="btn btn-success" name="submit" value="Decode"></span>
+                    <span><input type="submit" class="btn btn-success" name="submit" value="Encode">       <input type="submit" class="btn btn-success" name="submit" value="Decode"></span>
                     <div class="row">
                         <font size="15">
                             {{ decodeText }}
