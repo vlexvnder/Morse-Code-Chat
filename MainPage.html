@@ -1,0 +1,74 @@
+<!--excuse the mess--->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+        <title>Morse Code Encoder</title>
+        <script src="jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<script>window.setInterval(function(){
+  $( "#chat" ).load( "https://agoldberg.pythonanywhere.com/comments" );
+}, 1000);</script>
+
+
+
+
+    <body>
+        <nav class="navbar navbar-inverse">
+
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <span><a class="navbar-brand" style="position: relative;" href="/">Morse Code Encoder</a><a class="navbar-brand" href="logout">Logout</a></span>
+
+          </div>
+        </nav>
+
+        <div id="chat" class="container" style="position: relative;height: 200px;overflow: auto;display: block;">
+
+
+
+                {% for comment in comments %}
+                <div class="row">
+
+                    <font size="15">
+                     <span id="comment">{{ comment }}</span>
+
+                    </font>
+
+</div>
+<script>var objDiv = document.getElementById("chat");
+objDiv.scrollTop = objDiv.scrollHeight</script>
+
+
+                {% endfor %}
+ </div>
+
+            <div class="row">
+                <form action="." method="POST" class="container">
+                    <textarea class="form-control" name="contents" placeholder="Enter something!"></textarea>
+                    <br>
+
+
+
+                    <span><input type="submit" class="btn btn-success" name="submit" value="Encode">  <input type="submit" class="btn btn-success" name="submit" value="Decode"></span>
+                    <div class="row">
+                        <font size="15">
+                            {{ decodeText }}
+                        </font>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </body>
+</html>
