@@ -1,6 +1,7 @@
 # Morser-Code-Encoder
 
 A small website built on the Flask web framework with a little bit of JavaScript sprinkled in.
+Run on Chrome- some elements may not work well on other browsers.
 
 <b>Featues:</b>
 <ul>
